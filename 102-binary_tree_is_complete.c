@@ -21,7 +21,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	if (tree->left && !tree->right && (comp_l == 1 && comp_r == 0))
 		return (2);
 
-	if ((comp_l == 0 && comp_r == 1) || (comp_l == 1 && comp_r == 0))
+	if ((comp_l == 0 && comp_r > 0) || (comp_l > 0 && comp_r == 0))
 		comp = 0;
 	else if ((comp_l == 2 && comp_r == 2) || (comp_l == 2 && comp_r == 2))
 		comp = 0;
